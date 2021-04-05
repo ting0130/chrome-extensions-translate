@@ -1,1 +1,1 @@
-# chrome-extensions--translate
+# chrome-extensions-translate

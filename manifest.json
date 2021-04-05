@@ -1,0 +1,37 @@
+{
+    "name": "test-translate",
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "description": "test translate",
+    "icons": {
+        "16": "images/translate_icon_16.png",
+        "32": "images/translate_icon_32.png",
+        "48": "images/translate_icon_48.png"
+    },
+    "browser_action": {
+        "default_icon": {
+            "16": "images/translate_icon_16.png",
+            "32": "images/translate_icon_32.png"
+        },
+        "default_title": "划词翻译",
+        "default_popup": "popup/popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "css": ["content_script.css"],
+            "js": ["content_script.js"]
+        }
+    ],
+    "devtools_page": "devtools.html",
+    "permissions": [
+        "activeTab",
+        "storage",
+        "tabs",
+        "contextMenus"
+    ],
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    }
+}
